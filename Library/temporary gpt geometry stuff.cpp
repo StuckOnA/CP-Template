@@ -1,3 +1,5 @@
+const double PI = acos(-1.0);
+
 class point {
 public:
     double x, y;
@@ -8,9 +10,6 @@ public:
     point operator - (const point &p) const { return {x - p.x, y - p.y}; }
     point operator * (double k) const { return {x * k, y * k}; }
     point operator / (double k) const { return {x / k, y / k}; }
-
-    double dot(const point &p) const { return x * p.x + y * p.y; }
-    double cross(const point &p) const { return x * p.y - y * p.x; }
 
     double norm2() const { return x * x + y * y; }
     double norm()  const { return sqrt(norm2()); }
@@ -39,3 +38,11 @@ public:
         return out << p.x << " " << p.y << endl;
     }
 };
+
+inline double dot(const point &a, const point &b) {
+    return a.x * b.x + a.y * b.y;
+}
+
+inline double cross(const point &a, const point &b) {
+    return a.x * b.y - a.y * b.x;
+}
