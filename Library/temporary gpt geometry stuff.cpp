@@ -58,4 +58,5 @@ struct F {
 
 ostream& operator<<(ostream& os, const F& f) {
     os << std::format("{:.6f}", f.x);
+    return os;
 }
