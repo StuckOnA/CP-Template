@@ -28,4 +28,13 @@ public:
         double c = cos(theta), s = sin(theta);
         return {x * c - y * s, x * s + y * c};
     }
+
+    friend istream& operator>>(istream &in, point &p) {
+        return in >> p.x >> p.y;
+    }
+
+    friend ostream& operator<<(ostream &out, const point &p) {
+        out << fixed << setprecision(6);
+        return out << '(' << p.x << ", " << p.y << ')';
+    }
 };
