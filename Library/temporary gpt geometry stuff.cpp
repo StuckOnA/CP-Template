@@ -17,6 +17,7 @@ public:
 
     double angle() const {
         return atan2(y, x);
+        //return fmod(atan2(y, x) + 2 * M_PI, 2 * M_PI);
     }
 
     point unit() const {
