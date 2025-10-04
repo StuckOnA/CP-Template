@@ -50,3 +50,12 @@ inline double cross(const point &a, const point &b) {
 double angle_between(const point &a, const point &b) {
     return atan2(fabs(cross(a, b)), dot(a, b));
 }
+
+struct F {
+    double x;
+    F(double _x) : x(_x) {}
+};
+
+ostream& operator<<(ostream& os, const F& f) {
+    os << std::format("{:.6f}", f.x);
+}
