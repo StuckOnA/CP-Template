@@ -48,5 +48,5 @@ inline double cross(const point &a, const point &b) {
 }
 
 double angle_between(const point &a, const point &b) {
-    return atan2(cross(a, b), dot(a, b));
+    return atan2(fabs(cross(a, b)), dot(a, b));
 }
