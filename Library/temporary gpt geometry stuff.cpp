@@ -57,6 +57,8 @@ struct F {
 };
 
 ostream& operator<<(ostream& os, const F& f) {
-    os << std::format("{:.6f}", f.x);
+    char buf[50];
+    sprintf(buf, "%.6f", f.x);
+    os << buf;
     return os;
 }
