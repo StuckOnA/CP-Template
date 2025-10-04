@@ -35,6 +35,6 @@ public:
 
     friend ostream& operator<<(ostream &out, const point &p) {
         out << fixed << setprecision(6);
-        return out << '(' << p.x << ", " << p.y << ')';
+        return out << p.x << " " << p.y << endl;
     }
 };
