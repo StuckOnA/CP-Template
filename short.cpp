@@ -1,3 +1,4 @@
+//জীবনে একটি space এর গুরুত্ব অনেক
 #include <bits/stdc++.h>
 #define int long long
 #define endl '\n'
